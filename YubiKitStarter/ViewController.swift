@@ -24,13 +24,13 @@ class ViewController: LightningInteractionViewController {
         if YubiKitDeviceCapabilities.supportsLightningKey {
             // Make sure the session is started
             YubiKitManager.shared.keySession.startSession()
-            
+
             // Enable state observation (see LightningInteractionViewController)
             observeSessionStateUpdates = true
-            
+
             // Update the key session data manually when app loads
             //keySessionStateDidChange()
-            
+
         } else {
             lblKeyInserted.text = "This device or OS does not support a YubiKey."
         }
@@ -57,7 +57,7 @@ class ViewController: LightningInteractionViewController {
                 return
             }
             lblKeyInserted.text = "\(keyDescription.name) CONNECTED"
-            lblKeyInserted.textColor = UIColor.green
+            lblKeyInserted.textColor = hexStringToUIColor(hex: "#9aca3c")
             lblFirmware.text = "Firmware: \(keyDescription.firmwareRevision)"
             lblSerial.text = "Serial: \(keyDescription.serialNumber)"
         }
@@ -97,6 +97,28 @@ class ViewController: LightningInteractionViewController {
         } else {
             DispatchQueue.main.async(execute: execute)
         }
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
 

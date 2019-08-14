@@ -325,7 +325,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YubiKitStarter/YubiKitStarter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A6586UA84V;
+				DEVELOPMENT_TEAM = GR5DHCQV9E;
 				HEADER_SEARCH_PATHS = "./YubiKit/**";
 				INFOPLIST_FILE = YubiKitStarter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -335,7 +335,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = ./YubiKit/debug_universal;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yubikit.starter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yubikit.start;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YubiKitStarter/YubiKitStarter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -351,7 +351,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YubiKitStarter/YubiKitStarter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A6586UA84V;
+				DEVELOPMENT_TEAM = GR5DHCQV9E;
 				HEADER_SEARCH_PATHS = "./YubiKit/**";
 				INFOPLIST_FILE = YubiKitStarter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -361,7 +361,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = ./YubiKit/release;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yubikit.starter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yubikit.start;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YubiKitStarter/YubiKitStarter-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

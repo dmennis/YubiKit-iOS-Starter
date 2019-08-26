@@ -4,7 +4,7 @@
 
 ## [About](#about)
 
-`YubiKit Starter` is a single view iOS Swift **Swift 5.0**+ app with the [Yubico Mobile iOS SDK (YubiKit)](https://github.com/YubicoLabs/yubikit-ios) already integrated. This starter is intended to be used as a baseline for integrating strong two factor authentication for mobile apps using the YubiKey 5Ci hardware key over the Apple Lightning® port.
+`YubiKit Starter` is a single view iOS Swift **Swift 5.0**+ app with the [Yubico Mobile iOS SDK (YubiKit)](https://github.com/Yubico/yubikit-ios) already integrated. This starter is intended to be used as a baseline for integrating strong two factor authentication for mobile apps using the YubiKey 5Ci hardware key over the Apple Lightning® port.
 
 > **About the Yubico Mobile iOS SDK**: The Yubico Mobile iOS SDK or **YubiKit** provides the interface between your iOS app and the YubiKey connected to the Lightning port. The YubiKey 5Ci is an MFi accessory and the YubiKit communicates with the key over iAP2 (iPod Accessory Protocol) when the key is connected to the Lightning port of a physical device.
 
@@ -16,7 +16,7 @@
 
 1. Clone this repo from Mac Terminal
 ```git
- $ git clone https://github.com/dmennis/YubiKit-iOS-Starter.git
+ $ git clone https://github.com/yubicolabs/YubiKit-iOS-Starter.git
 ```
 2. Launch the project in Xcode (11+) 
 ```git

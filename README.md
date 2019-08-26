@@ -10,6 +10,9 @@
 
 > **Is the YubiKit required?** You don't need to include the YubiKit into your app to interact with the YubiKey 5Ci connected to the Lightning port if you are only implementing `Yubico OTP`, `static passwords`, or `custom slot 1 or 2 configuration` as the YubiKey 5Ci acts as a HID keyboard (and not an MFi accessory) in these scenarios and will simply type out the codes to screen when the key (YubiKey 5Ci) is touched.
 
+![YubiKey 5Ci image](./docassets/5Ci-WhiteBG-sml.png)
+5Ci-WhiteBG-sml
+
 ## [Quick Start](#quickstart)
 
 1. Clone this repo from Mac Terminal
@@ -43,13 +46,13 @@ YubiKit SDK is currently available through a static framework and can be added t
 
 **[Download YubiKit SDK for iOS (zip file)]**
 
-1. [Download](https://github.com/YubicoLabs/yubikit-ios/releases/download/2.0.0-RC1/YubiKit_2_0_0_RC1.zip) the YubiKit SDK for iOS (.zip) to your desktop.
+1. [Download](https://github.com/Yubico/yubikit-ios/releases/download/2.0.0/YubiKit_2_0_0.zip) the YubiKit SDK for iOS (.zip) to your desktop.
 
-2. Unzip YubiKit_2_0_0_RC1.zip
+2. Unzip YubiKit_2_0_0.zip
 
 **[Add YubiKit folder to your Xcode project]**
 
-3. Drag the entire `/YubiKit_2_0_0_RC1⁩/YubiKit` folder to your YubiKitStarter Xcode project. Check the option *Copy items if needed*. 
+3. Drag the entire `/YubiKit_2_0_0/YubiKit` folder to your YubiKitStarter Xcode project. Check the option *Copy items if needed*. 
 
 **[Linked Frameworks and Libraries]**
 
@@ -91,8 +94,8 @@ Let's build the project!
 > The YubiKey 5Ci is an Apple MFi external accessory and communicates over iAP2. You are telling your app that all communication with the 5Ci as a supported external accessory is via `com.yubico.ylp`.
 
 
-Open info.plist and add `U2F` and `com.yubico.ylp` as items under `Supported external accessory protocols`
-![Bridging Header](./docassets/infoplist-ylp.png)
+Open info.plist and add `com.yubico.ylp` as a new item under `Supported external accessory protocols`
+![Bridging Header](./docassets/supported-protocols.png)
 
 **[Grant accesss to NFC]**
 

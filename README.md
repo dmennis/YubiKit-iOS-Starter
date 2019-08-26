@@ -11,7 +11,6 @@
 > **Is the YubiKit required?** You don't need to include the YubiKit into your app to interact with the YubiKey 5Ci connected to the Lightning port if you are only implementing `Yubico OTP`, `static passwords`, or `custom slot 1 or 2 configuration` as the YubiKey 5Ci acts as a HID keyboard (and not an MFi accessory) in these scenarios and will simply type out the codes to screen when the key (YubiKey 5Ci) is touched.
 
 ![YubiKey 5Ci image](./docassets/5Ci-WhiteBG-sml.png)
-5Ci-WhiteBG-sml
 
 ## [Quick Start](#quickstart)
 

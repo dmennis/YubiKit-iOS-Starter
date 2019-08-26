@@ -28,7 +28,7 @@ class ViewController: LightningInteractionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if YubiKitDeviceCapabilities.supportsLightningKey {
+        if YubiKitDeviceCapabilities.supportsMFIAccessoryKey {
             // Make sure the session is started
             YubiKitManager.shared.keySession.startSession()
 
@@ -46,7 +46,7 @@ class ViewController: LightningInteractionViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if YubiKitDeviceCapabilities.supportsLightningKey {
+        if YubiKitDeviceCapabilities.supportsMFIAccessoryKey {
             // Disable state observation (see LightningInteractionViewController)
             observeSessionStateUpdates = false
             YubiKitManager.shared.keySession.cancelCommands()
